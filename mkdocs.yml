@@ -1,5 +1,5 @@
 # Project information
-site_name: REPO_NAME_OR_SITE_NAME
+site_name: NLP_project_DVC_mkdocs
 # defeine TOC or order of website-
 nav:
   - Home: index.md
@@ -9,8 +9,8 @@ site_description: >-
   DESCRIPTION
 
 # Repository
-repo_name: Neelesh-Jaiswal/DVC_project_mkdocs_template
-repo_url: https://github.com/Neelesh-Jaiswal/DVC_project_mkdocs_template
+repo_name: Neelesh-Jaiswal/NLP_project_DVC_mkdocs
+repo_url: https://github.com/Neelesh-Jaiswal/NLP_project_DVC_mkdocs
 
 # Configuration
 theme:
