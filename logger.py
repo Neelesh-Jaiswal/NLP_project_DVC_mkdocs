@@ -3,7 +3,6 @@ import os
 
 import linecache
 import sys
-import traceback as tb
 
 
 class Logger_class:
