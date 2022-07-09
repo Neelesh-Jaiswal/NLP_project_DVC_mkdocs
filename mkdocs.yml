@@ -4,6 +4,7 @@ site_name: NLP_project_DVC_mkdocs
 nav:
   - Home: index.md
   - Data Preparation stage: data_prep.md
+  - Featurization stage: featurization.md
 
 site_author: Neelesh Jaiswal
 site_description: >-
