@@ -3,6 +3,7 @@ site_name: NLP_project_DVC_mkdocs
 # defeine TOC or order of website-
 nav:
   - Home: index.md
+  - Data Preparation stage: data_prep.md
 
 site_author: Neelesh Jaiswal
 site_description: >-
