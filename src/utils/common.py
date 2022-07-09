@@ -1,3 +1,4 @@
+import pandas as pd
 import yaml
 from logger import Logger_class
 import os
@@ -21,6 +22,22 @@ def save_json(path:str, data:dict)->None:
         json.dump(data, f, indent=4)
     
     Logger_class(f"json file: {path} saved successfully")
+
+def get_df(path_to_data:str, 
+            sep:str='\t',
+            column_names:list=['id','label','text'],
+            encoding='utf-8')-> pd.DataFrame:
+            
+    df = pd.read_csv(
+                    path_to_data, 
+                    delimiter=sep, 
+                    encoding=encoding, 
+                    header=None, 
+                    names = column_names
+                    )
+
+    Logger_class(f'The input dataframe from {path_to_data} of size {df.shape} is read')
+    return df
 
 # if __name__ == "__main__":
     # print(read_yaml("configs\config.yaml"))
