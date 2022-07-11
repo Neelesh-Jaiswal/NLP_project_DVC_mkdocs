@@ -7,7 +7,7 @@ stages:
       md5: a304afb96060aad90176268345e10355
       size: 37891850
     - path: src/stage_01_prepare_data.py
-      md5: f2bea6c70a2327f93f93c92562f9f0fe
+      md5: 48d1a4a02d4131c49e1ccd2cb2ee8c5e
       size: 2118
     - path: src/utils
       md5: 36706b79c84e8ce970e3846bbabf0d85.dir

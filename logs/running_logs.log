@@ -28,3 +28,8 @@
 12/Jul/22 ➙ 01:04:52 ➥ json file: prc.json saved successfully
 12/Jul/22 ➙ 01:04:52 ➥ json file: roc.json saved successfully
 12/Jul/22 ➙ 01:04:52 ➥ >>>>>>>>STAGE:Evaluation ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:14:29 ➥ >>>>>>>>STAGE:Prepare_data STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:14:29 ➥ yaml file: configs/config.yaml loaded successfully
+12/Jul/22 ➙ 01:14:29 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:14:29 ➥ directories: artifacts\prepared created successfully
+12/Jul/22 ➙ 01:14:30 ➥ >>>>>>>>STAGE:Prepare_data ENDED<<<<<<<<<<<
