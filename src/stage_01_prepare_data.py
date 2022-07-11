@@ -46,9 +46,7 @@ if __name__ == "__main__":
     try:
         Logger_class(f'>>>>>>>>STAGE:{STAGE} STARTED<<<<<<<<<<<')
 
-        # main(config_path=parsed_args.config, params_path=parsed_args.params)
-            
-        content = main(config_path = parsed_args.config, params_path = parsed_args.params)
+        main(config_path=parsed_args.config, params_path=parsed_args.params)
 
         Logger_class(f'>>>>>>>>STAGE:{STAGE} ENDED<<<<<<<<<<<')
 
