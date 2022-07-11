@@ -131,3 +131,5 @@ dmypy.json
 
 # data file
 *.tsv
+artifacts/features/test.pkl
+artifacts/features/train.pkl
