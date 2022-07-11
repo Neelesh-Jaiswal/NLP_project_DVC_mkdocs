@@ -1,0 +1,30 @@
+12/Jul/22 ➙ 01:04:37 ➥ >>>>>>>>STAGE:Prepare_data STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:37 ➥ yaml file: configs\config.yaml loaded successfully
+12/Jul/22 ➙ 01:04:37 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:04:37 ➥ directories: artifacts\prepared created successfully
+12/Jul/22 ➙ 01:04:38 ➥ >>>>>>>>STAGE:Prepare_data ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:39 ➥ >>>>>>>>STAGE:Featurization STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:39 ➥ yaml file: configs\config.yaml loaded successfully
+12/Jul/22 ➙ 01:04:39 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:04:39 ➥ directories: artifacts\features created successfully
+12/Jul/22 ➙ 01:04:39 ➥ The input dataframe from artifacts\prepared\train.tsv of size (17536, 3) is read
+12/Jul/22 ➙ 01:04:46 ➥ The output matrix is saved at artifacts\features\train.pkl of shape: (17536, 2502)
+12/Jul/22 ➙ 01:04:46 ➥ The input dataframe from artifacts\prepared\test.tsv of size (7464, 3) is read
+12/Jul/22 ➙ 01:04:47 ➥ The output matrix is saved at artifacts\features\test.pkl of shape: (7464, 2502)
+12/Jul/22 ➙ 01:04:47 ➥ >>>>>>>>STAGE:Featurization ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:49 ➥ >>>>>>>>STAGE:Training STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:49 ➥ yaml file: configs\config.yaml loaded successfully
+12/Jul/22 ➙ 01:04:49 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:04:49 ➥ directories: artifacts\model created successfully
+12/Jul/22 ➙ 01:04:49 ➥ Input matrix size: (17536, 2502)
+12/Jul/22 ➙ 01:04:49 ➥ X matrix size: (17536, 2500)
+12/Jul/22 ➙ 01:04:49 ➥ Y matrix size: (17536,)
+12/Jul/22 ➙ 01:04:50 ➥ Saved our model at path: artifacts\model\model.pkl
+12/Jul/22 ➙ 01:04:50 ➥ >>>>>>>>STAGE:Training ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:51 ➥ >>>>>>>>STAGE:Evaluation STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:04:51 ➥ yaml file: configs\config.yaml loaded successfully
+12/Jul/22 ➙ 01:04:51 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:04:52 ➥ json file: scores.json saved successfully
+12/Jul/22 ➙ 01:04:52 ➥ json file: prc.json saved successfully
+12/Jul/22 ➙ 01:04:52 ➥ json file: roc.json saved successfully
+12/Jul/22 ➙ 01:04:52 ➥ >>>>>>>>STAGE:Evaluation ENDED<<<<<<<<<<<
