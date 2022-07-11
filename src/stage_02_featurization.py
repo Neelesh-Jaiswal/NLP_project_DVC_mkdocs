@@ -1,9 +1,8 @@
 import os
 import numpy as np
-from src.utils.common import create_directories, get_df, read_yaml
+from src.utils import create_directories, get_df, read_yaml, save_matrix
 from logger import Logger_class
 import argparse
-
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
 
 STAGE = "Featurization" 
@@ -21,8 +20,8 @@ def main(config_path,params_path):
     featurized_data_dir_path = os.path.join(artifacts['ARTIFACTS_DIR'],artifacts['FEATURIZED_DATA'])
     create_directories([featurized_data_dir_path])
 
-    featurized_data_dir_path = os.path.join(featurized_data_dir_path, artifacts['FEATURIZED_DATA_TRAIN'])
-    featurized_data_dir_path = os.path.join(featurized_data_dir_path, artifacts['FEATURIZED_DATA_TEST'])    
+    featurized_train_data_path = os.path.join(featurized_data_dir_path, artifacts['FEATURIZED_DATA_TRAIN'])
+    featurized_test_data_path = os.path.join(featurized_data_dir_path, artifacts['FEATURIZED_DATA_TEST'])    
 
     max_features = params['featurize']['max_features']
     n_grams = params['featurize']['n_grams']
@@ -35,8 +34,7 @@ def main(config_path,params_path):
         stop_words="english",
         max_features=max_features,
         ngram_range=(1,n_grams),
-        )
-        
+        )        
     bag_of_words.fit(train_words)
     train_words_binary_matrix = bag_of_words.transform(train_words)
 
@@ -45,6 +43,7 @@ def main(config_path,params_path):
     train_words_tfidf_matrix = tfidf.transform(train_words_binary_matrix)
      
      # call a function to save the train matrix
+    save_matrix(df=df_train, text_matrix=train_words_tfidf_matrix, out_path=featurized_train_data_path)
 
 
     # for test data
@@ -54,6 +53,7 @@ def main(config_path,params_path):
     test_words_tfidf_matrix = tfidf.transform(test_words_binary_matrix)
 
     # call a function to save the test matrix
+    save_matrix(df=df_test, text_matrix=test_words_tfidf_matrix, out_path=featurized_test_data_path)
     
 
 

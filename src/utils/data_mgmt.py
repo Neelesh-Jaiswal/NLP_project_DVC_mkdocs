@@ -1,8 +1,11 @@
+import numpy as np
 from logger import Logger_class
 import xml.etree.ElementTree as ET
 import re
 import random
 from tqdm import tqdm
+import scipy.sparse as sparse
+import joblib
 
 
 def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
@@ -33,5 +36,13 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
             obj.log()
             raise
 
-def save_matrix(df, matrix, out_path):
-    id_matrix = df.pid
+def save_matrix(df, text_matrix, out_path):
+    pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T
+    label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
+
+    result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
+
+    msg = f"The output matrix is saved at {out_path} of shape: {result.shape}" # 2500 + 1 +1
+    Logger_class(msg)
+
+    joblib.dump(result, out_path)
