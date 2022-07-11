@@ -5,6 +5,7 @@ nav:
   - Home: index.md
   - Data Preparation stage: data_prep.md
   - Featurization stage: featurization.md
+  - CML Guide: CML_from_DVC_studio.md
 
 site_author: Neelesh Jaiswal
 site_description: >-
