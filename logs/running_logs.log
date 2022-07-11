@@ -33,3 +33,28 @@
 12/Jul/22 ➙ 01:14:29 ➥ yaml file: params.yaml loaded successfully
 12/Jul/22 ➙ 01:14:29 ➥ directories: artifacts\prepared created successfully
 12/Jul/22 ➙ 01:14:30 ➥ >>>>>>>>STAGE:Prepare_data ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:05 ➥ >>>>>>>>STAGE:Featurization STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:05 ➥ yaml file: configs/config.yaml loaded successfully
+12/Jul/22 ➙ 01:19:05 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:19:05 ➥ directories: artifacts\features created successfully
+12/Jul/22 ➙ 01:19:06 ➥ The input dataframe from artifacts\prepared\train.tsv of size (17536, 3) is read
+12/Jul/22 ➙ 01:19:12 ➥ The output matrix is saved at artifacts\features\train.pkl of shape: (17536, 2502)
+12/Jul/22 ➙ 01:19:13 ➥ The input dataframe from artifacts\prepared\test.tsv of size (7464, 3) is read
+12/Jul/22 ➙ 01:19:14 ➥ The output matrix is saved at artifacts\features\test.pkl of shape: (7464, 2502)
+12/Jul/22 ➙ 01:19:14 ➥ >>>>>>>>STAGE:Featurization ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:15 ➥ >>>>>>>>STAGE:Training STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:15 ➥ yaml file: configs/config.yaml loaded successfully
+12/Jul/22 ➙ 01:19:15 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:19:15 ➥ directories: artifacts\model created successfully
+12/Jul/22 ➙ 01:19:15 ➥ Input matrix size: (17536, 2502)
+12/Jul/22 ➙ 01:19:15 ➥ X matrix size: (17536, 2500)
+12/Jul/22 ➙ 01:19:15 ➥ Y matrix size: (17536,)
+12/Jul/22 ➙ 01:19:17 ➥ Saved our model at path: artifacts\model\model.pkl
+12/Jul/22 ➙ 01:19:17 ➥ >>>>>>>>STAGE:Training ENDED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:18 ➥ >>>>>>>>STAGE:Evaluation STARTED<<<<<<<<<<<
+12/Jul/22 ➙ 01:19:18 ➥ yaml file: configs/config.yaml loaded successfully
+12/Jul/22 ➙ 01:19:18 ➥ yaml file: params.yaml loaded successfully
+12/Jul/22 ➙ 01:19:18 ➥ json file: scores.json saved successfully
+12/Jul/22 ➙ 01:19:18 ➥ json file: prc.json saved successfully
+12/Jul/22 ➙ 01:19:19 ➥ json file: roc.json saved successfully
+12/Jul/22 ➙ 01:19:19 ➥ >>>>>>>>STAGE:Evaluation ENDED<<<<<<<<<<<
