@@ -1,5 +1,5 @@
 # # uncomment below lines to use CML
-name: NLP_project_DVC_mkdocs
+name: DVC-project
 
 on: [push]
 
